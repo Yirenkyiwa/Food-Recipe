@@ -4,75 +4,153 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="./images/chef.ico"> -->
+    <link rel="icon" href="./images/Ladychef.ico">
     <title>Marie's Food Recipes</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="output.css">
 </head>
-<body class="text-red-600 font-nunito">
-    <div> <!--Content Wrapper-->
-        <div>
-            <nav> <!--Navigation-->
-                <div>
-                    <h1>
-                        <a class="uppercase"href="#">Marie's Food Recipes</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Marie's Food Recipes</title>
+</head>
+<body class="text-gray-600 font-nunito">
+    <div class="grid md:grid-cols-3"><!--Content wrapper-->
+        <div class="md:col-span-1 md:flex md:justify-end">
+            <nav class="text-right"> <!--Begin Nav Bar-->
+                <div class="flex justify-between items-center">
+                    <h1 class="text-gray text-sm font-bold uppercase p-5 border-b border-gray-100">
+                        <a href="#" class="hover:text-red-500">Marie's Food Recipes</a>
                     </h1>
-                </div>
-                <ul>
-                   <li>
-                       <a href="#">
-                           <span>Home</span>
-                       </a>
-                   </li> 
 
-                   <li>
-                    <a href="#">
-                        <span>About Us</span>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="#">
-                        <span>Contact Us</span>
-                    </a>
-                </li> 
-                </ul>
-            </nav>
-        </div><!--end of nav-->
-
-        <main>
-            <div>
-                <a href="#">Log in</a>
-                <a href="#">Sign up</a>
-            </div>
-
-            <header>
-                <h2>Recipes</h2>
-                <h3>For Marie's special followers</h3>
-            </header>
-
-            <div>
-                <h4>Latest Recipes</h4>
-
-                <div>
-                    <!--cards go here-->
-                    <img src="images/chili-stew.png" alt="Chilli Stew">
                     <div>
-                        <span>5 Bean Chilli stew</span>
-                        <span>Recipe by Marie</span>
+                        <svg id='menu-icon' class="w-6 h-6 mx-2 md:hidden hover:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </div>
                 </div>
 
-                <h4>Most Popular</h4>
+                <ul class="text-sm mt-6 hidden md:block" id='menu'>
+                    <li class="py-1">
+                        <a href="#" class="flex justify-end pb-2 md:border-r-4 md:border-white md:hover:border-red-500">
+                            <span class="font-bold">Home</span>
 
-                <div>
-                    <!--cards go here-->
-                </div>
+                            <svg class="w-5 h-5 ml-2 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </a>
+                    </li>
 
-                <div>
-                    <button>Load More</button>
+                    <li class="py-1">
+                        <a href="#" class="flex justify-end pb-2 md:border-r-4 md:border-white md:hover:border-red-500">
+                            <span class="  hover:font-bold    nav_link">About Us</span>
+
+                            <svg class="w-5 h-5 ml-2 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </a>
+                    </li>
+
+                    <li class="py-1">
+                        <a href="#" class="flex justify-end pb-2 md:border-r-4 md:border-white md:hover:border-red-500">
+                            <span class="hover:font-bold nav_link">Contact Us</span>
+
+                            <svg class="w-5 h-5 ml-2 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav><!--End of Nav Bar-->
+        </div>
+
+        <main class="p-12 bg-gray-100 md:col-span-2"><!--Main Body-->
+            <div class="text-red-500 flex justify-center md:justify-end">
+                <a class="btn border-red-500 md:border-2 hover:bg-red-500 hover:text-white transition ease-in duration-500" href="#">Log in</a>
+                <a class="btn ml-4 border-red-500 md:border-2 hover:bg-red-500 hover:text-white transition ease-in duration-500" href="#">Sign up</a>
+            </div>
+
+            <header>
+                <h2 class="text-5xl">Recipes</h2>
+                <h3 class="text-4lg font-semibold">For Marie's special followers</h3>
+            </header>
+
+            <div >
+                <h4 class="mt-8 pb-2 font-bold  border-b border-gray-100">Latest Recipes</h4>
+
+                <div class="grid lg:grid-cols-3 gap-10">
+                    <!--Cards go here-->
+                    <div class="card hover:shadow-lg">
+                        <div>
+                            <img src="images/chili-stew.png" alt="chili-stew-image" class="w-full h-32 sm:h-48 object-cover">
+                        </div>
+
+                        <div class="m-3">
+                            <span class="font-bold">5 bean Chilli Stew</span>
+                            <span class="block text-sm text-gray-400">Recipe by Marie </span>
+                        </div>
+
+                        <!--badge-->
+                        <div class="badge">
+                            <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+                            <span>25 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-lg">
+                        <div>
+                            <img src="images/noodles.jpg" alt="noodles-image" class="w-full h-32 sm:h-48 object-cover">
+                        </div>
+
+                        <div class="m-3">
+                            <span class="font-bold">Vege Noodles</span>
+                            <span class="block text-sm text-gray-400">Recipe by Jane </span>
+                        </div>
+
+                        <!--badge-->
+                        <div class="badge">
+                            <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+                            <span>10 mins</span>
+                        </div>
+                    </div>
+
+                    <div class="card hover:shadow-lg">
+                        <div>
+                            <img src="images/Jollof-Rice.jpg" alt="jollof-rice-image" class="w-full h-32 sm:h-48 object-cover">
+                        </div>
+
+                        <div class="m-3">
+                            <span class="font-bold">Jollof Rice</span>
+                            <span class="block text-sm text-gray-400">Recipe by Mark </span>
+                        </div>
+
+                        <!--badge-->
+                        <div class="badge">
+                            <svg class="w-4 h-4 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+                            <span>30 mins</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <h4 class="mt-8 pb-2 font-bold  border-b border-gray-100 text-red-500">Most Popular</h4>
+
+            <div>
+                <!--Cards go here-->
+            </div>
+
+            <div class="flex justify-center">
+                <button class="btn mt-4 bg-gray-200 p-2 hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300">Load more</button>
             </div>
         </main>
     </div>
+    
+    <script src="index.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    
 </body>
 </html>
