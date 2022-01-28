@@ -4,13 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss build -i src/styles.css -o public/output.css --watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss-cli@latest -i ./src/styles.css -o ./public/output.css --watch"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quarcoo-arc/Food-Recipe.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Quarcoo-arc/Food-Recipe/issues"
+  },
+  "homepage": "https://github.com/Quarcoo-arc/Food-Recipe#readme",
   "devDependencies": {
-    "@tailwindcss/forms": "^0.4.0-alpha.2",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
     "tailwindcss": "^3.0.17"
   }
 }
